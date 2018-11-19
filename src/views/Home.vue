@@ -3,7 +3,7 @@
     <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
     <vue-recaptcha sitekey="6Lfe33gUAAAAAMCuDwRfhSUV4sGkqGDaGrKqjkmZ">
-      <button type="submit">Submit</button>
+      <button type="submit" v-on:click="whenSubmit">Submit</button>
     </vue-recaptcha>
   </div>
 </template>
@@ -18,6 +18,11 @@ export default {
   components: {
     HelloWorld,
     VueRecaptcha,
+  },
+  methods: {
+    whenSubmit() {
+      console.log('something');
+    }
   }
 }
 </script>
