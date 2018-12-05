@@ -4,6 +4,7 @@
     <HelloWorld msg="Welcome to Your Vue.js App"/>
     <vue-recaptcha
       @verify="onVerify"
+      @expired="onExpired"
       sitekey="6Lfe33gUAAAAAMCuDwRfhSUV4sGkqGDaGrKqjkmZ">
       <button type="submit" v-on:click="whenSubmit">Submit</button>
     </vue-recaptcha>
@@ -25,7 +26,10 @@ export default {
     onVerify(key) {
       console.log('verifed');
       console.log(key);
-      grecaptcha.execute()
+    },
+    onExpired(key) {
+      console.log('Expired');
+      console.log(key);
     },
     whenSubmit() {
       console.log('something');
