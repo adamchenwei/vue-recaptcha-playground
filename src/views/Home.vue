@@ -2,7 +2,9 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <vue-recaptcha sitekey="6Lfe33gUAAAAAMCuDwRfhSUV4sGkqGDaGrKqjkmZ">
+    <vue-recaptcha
+      @verify="onVerify"
+      sitekey="6Lfe33gUAAAAAMCuDwRfhSUV4sGkqGDaGrKqjkmZ">
       <button type="submit" v-on:click="whenSubmit">Submit</button>
     </vue-recaptcha>
   </div>
@@ -20,6 +22,11 @@ export default {
     VueRecaptcha,
   },
   methods: {
+    onVerify(key) {
+      console.log('verifed');
+      console.log(key);
+      grecaptcha.execute()
+    },
     whenSubmit() {
       console.log('something');
     }
