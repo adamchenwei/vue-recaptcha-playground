@@ -1,5 +1,7 @@
 # vue-recaptcha-playground
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/adamchenwei/vue-recaptcha-playground.svg)](https://greenkeeper.io/)
+
 ## Project setup
 ```
 yarn install
