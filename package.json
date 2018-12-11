@@ -15,7 +15,7 @@
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
-    "@cypress/webpack-preprocessor": "^3.0.0",
+    "@cypress/webpack-preprocessor": "^4.0.2",
     "@vue/cli-plugin-babel": "^3.0.5",
     "@vue/cli-plugin-e2e-cypress": "^3.0.5",
     "@vue/cli-plugin-eslint": "^3.0.5",
